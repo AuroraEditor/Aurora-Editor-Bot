@@ -1,0 +1,341 @@
+Array
+(
+    [isPayload] => 1
+    [payload] => Array
+        (
+            [ref] => refs/heads/all-contributors/add-mithem
+            [before] => 0000000000000000000000000000000000000000
+            [after] => 2030185c617c8e34a0c6a8a8fd63d81fd1596a69
+            [repository] => Array
+                (
+                    [id] => 509088249
+                    [node_id] => R_kgDOHlgR-Q
+                    [name] => AuroraEditor
+                    [full_name] => AuroraEditor/AuroraEditor
+                    [private] => 
+                    [owner] => Array
+                        (
+                            [name] => AuroraEditor
+                            [email] => 
+                            [login] => AuroraEditor
+                            [id] => 106490518
+                            [node_id] => O_kgDOBljqlg
+                            [avatar_url] => https://avatars.githubusercontent.com/u/106490518?v=4
+                            [gravatar_id] => 
+                            [url] => https://api.github.com/users/AuroraEditor
+                            [html_url] => https://github.com/AuroraEditor
+                            [followers_url] => https://api.github.com/users/AuroraEditor/followers
+                            [following_url] => https://api.github.com/users/AuroraEditor/following{/other_user}
+                            [gists_url] => https://api.github.com/users/AuroraEditor/gists{/gist_id}
+                            [starred_url] => https://api.github.com/users/AuroraEditor/starred{/owner}{/repo}
+                            [subscriptions_url] => https://api.github.com/users/AuroraEditor/subscriptions
+                            [organizations_url] => https://api.github.com/users/AuroraEditor/orgs
+                            [repos_url] => https://api.github.com/users/AuroraEditor/repos
+                            [events_url] => https://api.github.com/users/AuroraEditor/events{/privacy}
+                            [received_events_url] => https://api.github.com/users/AuroraEditor/received_events
+                            [type] => Organization
+                            [site_admin] => 
+                        )
+
+                    [html_url] => https://github.com/AuroraEditor/AuroraEditor
+                    [description] => AuroraEditor is a IDE built by the community, for the community, and written in Swift for the best native performance and feel for macOS.
+                    [fork] => 
+                    [url] => https://github.com/AuroraEditor/AuroraEditor
+                    [forks_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/forks
+                    [keys_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/keys{/key_id}
+                    [collaborators_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/collaborators{/collaborator}
+                    [teams_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/teams
+                    [hooks_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/hooks
+                    [issue_events_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/issues/events{/number}
+                    [events_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/events
+                    [assignees_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/assignees{/user}
+                    [branches_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/branches{/branch}
+                    [tags_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/tags
+                    [blobs_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/git/blobs{/sha}
+                    [git_tags_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/git/tags{/sha}
+                    [git_refs_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/git/refs{/sha}
+                    [trees_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/git/trees{/sha}
+                    [statuses_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/statuses/{sha}
+                    [languages_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/languages
+                    [stargazers_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/stargazers
+                    [contributors_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/contributors
+                    [subscribers_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/subscribers
+                    [subscription_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/subscription
+                    [commits_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/commits{/sha}
+                    [git_commits_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/git/commits{/sha}
+                    [comments_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/comments{/number}
+                    [issue_comment_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/issues/comments{/number}
+                    [contents_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/contents/{+path}
+                    [compare_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/compare/{base}...{head}
+                    [merges_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/merges
+                    [archive_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/{archive_format}{/ref}
+                    [downloads_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/downloads
+                    [issues_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/issues{/number}
+                    [pulls_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/pulls{/number}
+                    [milestones_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/milestones{/number}
+                    [notifications_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/notifications{?since,all,participating}
+                    [labels_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/labels{/name}
+                    [releases_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/releases{/id}
+                    [deployments_url] => https://api.github.com/repos/AuroraEditor/AuroraEditor/deployments
+                    [created_at] => 1656595078
+                    [updated_at] => 2023-09-22T23:15:31Z
+                    [pushed_at] => 1695464530
+                    [git_url] => git://github.com/AuroraEditor/AuroraEditor.git
+                    [ssh_url] => git@github.com:AuroraEditor/AuroraEditor.git
+                    [clone_url] => https://github.com/AuroraEditor/AuroraEditor.git
+                    [svn_url] => https://github.com/AuroraEditor/AuroraEditor
+                    [homepage] => https://auroraeditor.com
+                    [size] => 16386
+                    [stargazers_count] => 687
+                    [watchers_count] => 687
+                    [language] => Swift
+                    [has_issues] => 1
+                    [has_projects] => 1
+                    [has_downloads] => 1
+                    [has_wiki] => 1
+                    [has_pages] => 
+                    [has_discussions] => 1
+                    [forks_count] => 42
+                    [mirror_url] => 
+                    [archived] => 
+                    [disabled] => 
+                    [open_issues_count] => 45
+                    [license] => Array
+                        (
+                            [key] => mit
+                            [name] => MIT License
+                            [spdx_id] => MIT
+                            [url] => https://api.github.com/licenses/mit
+                            [node_id] => MDc6TGljZW5zZTEz
+                        )
+
+                    [allow_forking] => 1
+                    [is_template] => 
+                    [web_commit_signoff_required] => 
+                    [topics] => Array
+                        (
+                            [0] => aeide
+                            [1] => aurora
+                            [2] => aurora-editor
+                            [3] => auroraeditor
+                            [4] => cocoa
+                            [5] => code
+                            [6] => editor
+                            [7] => editors
+                            [8] => hacktoberfest
+                            [9] => ide
+                            [10] => macos
+                            [11] => node
+                            [12] => objective-c
+                            [13] => programming
+                            [14] => swift
+                            [15] => swiftui
+                            [16] => texteditor
+                            [17] => tool
+                        )
+
+                    [visibility] => public
+                    [forks] => 42
+                    [open_issues] => 45
+                    [watchers] => 687
+                    [default_branch] => development
+                    [stargazers] => 687
+                    [master_branch] => development
+                    [organization] => AuroraEditor
+                )
+
+            [pusher] => Array
+                (
+                    [name] => allcontributors[bot]
+                    [email] => 
+                )
+
+            [organization] => Array
+                (
+                    [login] => AuroraEditor
+                    [id] => 106490518
+                    [node_id] => O_kgDOBljqlg
+                    [url] => https://api.github.com/orgs/AuroraEditor
+                    [repos_url] => https://api.github.com/orgs/AuroraEditor/repos
+                    [events_url] => https://api.github.com/orgs/AuroraEditor/events
+                    [hooks_url] => https://api.github.com/orgs/AuroraEditor/hooks
+                    [issues_url] => https://api.github.com/orgs/AuroraEditor/issues
+                    [members_url] => https://api.github.com/orgs/AuroraEditor/members{/member}
+                    [public_members_url] => https://api.github.com/orgs/AuroraEditor/public_members{/member}
+                    [avatar_url] => https://avatars.githubusercontent.com/u/106490518?v=4
+                    [description] => Project of the @Aurora-Company.
+                )
+
+            [sender] => Array
+                (
+                    [login] => allcontributors[bot]
+                    [id] => 46447321
+                    [node_id] => MDM6Qm90NDY0NDczMjE=
+                    [avatar_url] => https://avatars.githubusercontent.com/in/23186?v=4
+                    [gravatar_id] => 
+                    [url] => https://api.github.com/users/allcontributors%5Bbot%5D
+                    [html_url] => https://github.com/apps/allcontributors
+                    [followers_url] => https://api.github.com/users/allcontributors%5Bbot%5D/followers
+                    [following_url] => https://api.github.com/users/allcontributors%5Bbot%5D/following{/other_user}
+                    [gists_url] => https://api.github.com/users/allcontributors%5Bbot%5D/gists{/gist_id}
+                    [starred_url] => https://api.github.com/users/allcontributors%5Bbot%5D/starred{/owner}{/repo}
+                    [subscriptions_url] => https://api.github.com/users/allcontributors%5Bbot%5D/subscriptions
+                    [organizations_url] => https://api.github.com/users/allcontributors%5Bbot%5D/orgs
+                    [repos_url] => https://api.github.com/users/allcontributors%5Bbot%5D/repos
+                    [events_url] => https://api.github.com/users/allcontributors%5Bbot%5D/events{/privacy}
+                    [received_events_url] => https://api.github.com/users/allcontributors%5Bbot%5D/received_events
+                    [type] => Bot
+                    [site_admin] => 
+                )
+
+            [created] => 1
+            [deleted] => 
+            [forced] => 
+            [base_ref] => refs/heads/development
+            [compare] => https://github.com/AuroraEditor/AuroraEditor/compare/all-contributors/add-mithem
+            [commits] => Array
+                (
+                )
+
+            [head_commit] => Array
+                (
+                    [id] => 2030185c617c8e34a0c6a8a8fd63d81fd1596a69
+                    [tree_id] => 0c6100abaf5031856c555c9832c83aa772a3bb21
+                    [distinct] => 1
+                    [message] => Fix GitHub login texts, login view window closing, sc-account id generation (#520)
+
+## Summary
+
+- fix the login view texts for GitHub and GitHub Enterprise accounts
+(the localizations were switched around)
+- fix the login view windows closing then logged successfully
+- improve the id generation for source control accounts by not only
+using the username but also a provider-specific string, so the same
+usernames at different providers don't count as identical accounts
+
+## Changes Made
+
+See above.
+
+## TODO
+
+None.
+
+## Motivation
+
+Fix the explained bugs.
+
+## Testing
+
+- looking at the localizations
+- validating the views close when logging in with GitHub & GitLab
+- adding multiple accounts at once with the same username (GitHub &
+GitLab)
+
+## Screenshots/GIFs
+
+
+## Checklist
+
+Please ensure all of the following are completed before submitting the
+PR:
+
+- [X] Code has been tested and verified.
+- [ ] Documentation has been updated to reflect the changes.
+- [X] All tests pass successfully.
+- [X] Code follows the project's coding guidelines and style.
+- [X] The branch is up-to-date with the latest changes from the main
+branch.
+- [ ] Reviewed by at least one other contributor.
+
+## Related Issues
+
+This PR addresses the following issue(s): #500 
+
+## Additional Notes
+
+Closes #500
+                    [timestamp] => 2023-09-23T12:21:47+02:00
+                    [url] => https://github.com/AuroraEditor/AuroraEditor/commit/2030185c617c8e34a0c6a8a8fd63d81fd1596a69
+                    [author] => Array
+                        (
+                            [name] => Wesley de Groot
+                            [email] => email@wesleydegroot.nl
+                            [username] => 0xWDG
+                        )
+
+                    [committer] => Array
+                        (
+                            [name] => GitHub
+                            [email] => noreply@github.com
+                            [username] => web-flow
+                        )
+
+                    [added] => Array
+                        (
+                        )
+
+                    [removed] => Array
+                        (
+                        )
+
+                    [modified] => Array
+                        (
+                            [0] => AuroraEditor/Base/AppPreferences/Model/Accounts/EditorAccountModel.swift
+                            [1] => AuroraEditor/Base/AppPreferences/UI/AccountsPreferences/AccountItemView.swift
+                            [2] => AuroraEditor/Base/AppPreferences/UI/AccountsPreferences/AccountSelectionDialog.swift
+                            [3] => AuroraEditor/Base/AppPreferences/UI/AccountsPreferences/Login/AuroraEditor/AuroraEditorLoginView.swift
+                            [4] => AuroraEditor/Base/AppPreferences/UI/AccountsPreferences/Login/Github/GithubEnterpriseLoginView.swift
+                            [5] => AuroraEditor/Base/AppPreferences/UI/AccountsPreferences/Login/Github/GithubLoginView.swift
+                            [6] => AuroraEditor/Base/AppPreferences/UI/AccountsPreferences/Login/Gitlab/GitlabHostedLoginView.swift
+                            [7] => AuroraEditor/Base/AppPreferences/UI/AccountsPreferences/Login/Gitlab/GitlabLoginView.swift
+                            [8] => AuroraEditor/Base/AppPreferences/UI/AccountsPreferences/PreferenceAccountsView.swift
+                            [9] => AuroraEditor/Localization/af.lproj/Localizable.strings
+                            [10] => AuroraEditor/Localization/cs.lproj/Localizable.strings
+                            [11] => AuroraEditor/Localization/cy.lproj/Localizable.strings
+                            [12] => AuroraEditor/Localization/da.lproj/Localizable.strings
+                            [13] => AuroraEditor/Localization/de.lproj/Localizable.strings
+                            [14] => AuroraEditor/Localization/el.lproj/Localizable.strings
+                            [15] => AuroraEditor/Localization/en-001.lproj/Localizable.strings
+                            [16] => AuroraEditor/Localization/en.lproj/Localizable.strings
+                            [17] => AuroraEditor/Localization/es.lproj/Localizable.strings
+                            [18] => AuroraEditor/Localization/fi.lproj/Localizable.strings
+                            [19] => AuroraEditor/Localization/fil.lproj/Localizable.strings
+                            [20] => AuroraEditor/Localization/fr.lproj/Localizable.strings
+                            [21] => AuroraEditor/Localization/ga.lproj/Localizable.strings
+                            [22] => AuroraEditor/Localization/hi.lproj/Localizable.strings
+                            [23] => AuroraEditor/Localization/hr.lproj/Localizable.strings
+                            [24] => AuroraEditor/Localization/it.lproj/Localizable.strings
+                            [25] => AuroraEditor/Localization/ja.lproj/Localizable.strings
+                            [26] => AuroraEditor/Localization/ms.lproj/Localizable.strings
+                            [27] => AuroraEditor/Localization/mt.lproj/Localizable.strings
+                            [28] => AuroraEditor/Localization/nb.lproj/Localizable.strings
+                            [29] => AuroraEditor/Localization/ne.lproj/Localizable.strings
+                            [30] => AuroraEditor/Localization/nl.lproj/Localizable.strings
+                            [31] => AuroraEditor/Localization/pl.lproj/Localizable.strings
+                            [32] => AuroraEditor/Localization/pt-PT.lproj/Localizable.strings
+                            [33] => AuroraEditor/Localization/ro.lproj/Localizable.strings
+                            [34] => AuroraEditor/Localization/ru.lproj/Localizable.strings
+                            [35] => AuroraEditor/Localization/sv.lproj/Localizable.strings
+                            [36] => AuroraEditor/Localization/th-TH.lproj/Localizable.strings
+                            [37] => AuroraEditor/Localization/th.lproj/Localizable.strings
+                            [38] => AuroraEditor/Localization/tn.lproj/Localizable.strings
+                            [39] => AuroraEditor/Localization/uk.lproj/Localizable.strings
+                            [40] => AuroraEditor/Localization/vi.lproj/Localizable.strings
+                            [41] => AuroraEditor/Localization/xh-ZA.lproj/Localizable.strings
+                            [42] => AuroraEditor/Localization/zh-HK.lproj/Localizable.strings
+                            [43] => AuroraEditor/Localization/zh-Hans.lproj/Localizable.strings
+                            [44] => AuroraEditor/Localization/zh-Hant.lproj/Localizable.strings
+                            [45] => AuroraEditor/Localization/zu-ZA.lproj/Localizable.strings
+                        )
+
+                )
+
+        )
+
+    [debug] => Array
+        (
+            [payload] => {"ref":"refs/heads/all-contributors/add-mithem","before":"0000000000000000000000000000000000000000","after":"2030185c617c8e34a0c6a8a8fd63d81fd1596a69","repository":{"id":509088249,"node_id":"R_kgDOHlgR-Q","name":"AuroraEditor","full_name":"AuroraEditor/AuroraEditor","private":false,"owner":{"name":"AuroraEditor","email":null,"login":"AuroraEditor","id":106490518,"node_id":"O_kgDOBljqlg","avatar_url":"https://avatars.githubusercontent.com/u/106490518?v=4","gravatar_id":"","url":"https://api.github.com/users/AuroraEditor","html_url":"https://github.com/AuroraEditor","followers_url":"https://api.github.com/users/AuroraEditor/followers","following_url":"https://api.github.com/users/AuroraEditor/following{/other_user}","gists_url":"https://api.github.com/users/AuroraEditor/gists{/gist_id}","starred_url":"https://api.github.com/users/AuroraEditor/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/AuroraEditor/subscriptions","organizations_url":"https://api.github.com/users/AuroraEditor/orgs","repos_url":"https://api.github.com/users/AuroraEditor/repos","events_url":"https://api.github.com/users/AuroraEditor/events{/privacy}","received_events_url":"https://api.github.com/users/AuroraEditor/received_events","type":"Organization","site_admin":false},"html_url":"https://github.com/AuroraEditor/AuroraEditor","description":"AuroraEditor is a IDE built by the community, for the community, and written in Swift for the best native performance and feel for macOS.","fork":false,"url":"https://github.com/AuroraEditor/AuroraEditor","forks_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/forks","keys_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/keys{/key_id}","collaborators_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/teams","hooks_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/hooks","issue_events_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/issues/events{/number}","events_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/events","assignees_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/assignees{/user}","branches_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/branches{/branch}","tags_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/tags","blobs_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/git/refs{/sha}","trees_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/git/trees{/sha}","statuses_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/statuses/{sha}","languages_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/languages","stargazers_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/stargazers","contributors_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/contributors","subscribers_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/subscribers","subscription_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/subscription","commits_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/commits{/sha}","git_commits_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/git/commits{/sha}","comments_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/comments{/number}","issue_comment_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/issues/comments{/number}","contents_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/contents/{+path}","compare_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/compare/{base}...{head}","merges_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/merges","archive_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/downloads","issues_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/issues{/number}","pulls_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/pulls{/number}","milestones_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/milestones{/number}","notifications_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/labels{/name}","releases_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/releases{/id}","deployments_url":"https://api.github.com/repos/AuroraEditor/AuroraEditor/deployments","created_at":1656595078,"updated_at":"2023-09-22T23:15:31Z","pushed_at":1695464530,"git_url":"git://github.com/AuroraEditor/AuroraEditor.git","ssh_url":"git@github.com:AuroraEditor/AuroraEditor.git","clone_url":"https://github.com/AuroraEditor/AuroraEditor.git","svn_url":"https://github.com/AuroraEditor/AuroraEditor","homepage":"https://auroraeditor.com","size":16386,"stargazers_count":687,"watchers_count":687,"language":"Swift","has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"has_discussions":true,"forks_count":42,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":45,"license":{"key":"mit","name":"MIT License","spdx_id":"MIT","url":"https://api.github.com/licenses/mit","node_id":"MDc6TGljZW5zZTEz"},"allow_forking":true,"is_template":false,"web_commit_signoff_required":false,"topics":["aeide","aurora","aurora-editor","auroraeditor","cocoa","code","editor","editors","hacktoberfest","ide","macos","node","objective-c","programming","swift","swiftui","texteditor","tool"],"visibility":"public","forks":42,"open_issues":45,"watchers":687,"default_branch":"development","stargazers":687,"master_branch":"development","organization":"AuroraEditor"},"pusher":{"name":"allcontributors[bot]","email":null},"organization":{"login":"AuroraEditor","id":106490518,"node_id":"O_kgDOBljqlg","url":"https://api.github.com/orgs/AuroraEditor","repos_url":"https://api.github.com/orgs/AuroraEditor/repos","events_url":"https://api.github.com/orgs/AuroraEditor/events","hooks_url":"https://api.github.com/orgs/AuroraEditor/hooks","issues_url":"https://api.github.com/orgs/AuroraEditor/issues","members_url":"https://api.github.com/orgs/AuroraEditor/members{/member}","public_members_url":"https://api.github.com/orgs/AuroraEditor/public_members{/member}","avatar_url":"https://avatars.githubusercontent.com/u/106490518?v=4","description":"Project of the @Aurora-Company."},"sender":{"login":"allcontributors[bot]","id":46447321,"node_id":"MDM6Qm90NDY0NDczMjE=","avatar_url":"https://avatars.githubusercontent.com/in/23186?v=4","gravatar_id":"","url":"https://api.github.com/users/allcontributors%5Bbot%5D","html_url":"https://github.com/apps/allcontributors","followers_url":"https://api.github.com/users/allcontributors%5Bbot%5D/followers","following_url":"https://api.github.com/users/allcontributors%5Bbot%5D/following{/other_user}","gists_url":"https://api.github.com/users/allcontributors%5Bbot%5D/gists{/gist_id}","starred_url":"https://api.github.com/users/allcontributors%5Bbot%5D/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/allcontributors%5Bbot%5D/subscriptions","organizations_url":"https://api.github.com/users/allcontributors%5Bbot%5D/orgs","repos_url":"https://api.github.com/users/allcontributors%5Bbot%5D/repos","events_url":"https://api.github.com/users/allcontributors%5Bbot%5D/events{/privacy}","received_events_url":"https://api.github.com/users/allcontributors%5Bbot%5D/received_events","type":"Bot","site_admin":false},"created":true,"deleted":false,"forced":false,"base_ref":"refs/heads/development","compare":"https://github.com/AuroraEditor/AuroraEditor/compare/all-contributors/add-mithem","commits":[],"head_commit":{"id":"2030185c617c8e34a0c6a8a8fd63d81fd1596a69","tree_id":"0c6100abaf5031856c555c9832c83aa772a3bb21","distinct":true,"message":"Fix GitHub login texts, login view window closing, sc-account id generation (#520)\n\n## Summary\r\n\r\n- fix the login view texts for GitHub and GitHub Enterprise accounts\r\n(the localizations were switched around)\r\n- fix the login view windows closing then logged successfully\r\n- improve the id generation for source control accounts by not only\r\nusing the username but also a provider-specific string, so the same\r\nusernames at different providers don't count as identical accounts\r\n\r\n## Changes Made\r\n\r\nSee above.\r\n\r\n## TODO\r\n\r\nNone.\r\n\r\n## Motivation\r\n\r\nFix the explained bugs.\r\n\r\n## Testing\r\n\r\n- looking at the localizations\r\n- validating the views close when logging in with GitHub & GitLab\r\n- adding multiple accounts at once with the same username (GitHub &\r\nGitLab)\r\n\r\n## Screenshots/GIFs\r\n\r\n\r\n## Checklist\r\n\r\nPlease ensure all of the following are completed before submitting the\r\nPR:\r\n\r\n- [X] Code has been tested and verified.\r\n- [ ] Documentation has been updated to reflect the changes.\r\n- [X] All tests pass successfully.\r\n- [X] Code follows the project's coding guidelines and style.\r\n- [X] The branch is up-to-date with the latest changes from the main\r\nbranch.\r\n- [ ] Reviewed by at least one other contributor.\r\n\r\n## Related Issues\r\n\r\nThis PR addresses the following issue(s): #500 \r\n\r\n## Additional Notes\r\n\r\nCloses #500","timestamp":"2023-09-23T12:21:47+02:00","url":"https://github.com/AuroraEditor/AuroraEditor/commit/2030185c617c8e34a0c6a8a8fd63d81fd1596a69","author":{"name":"Wesley de Groot","email":"email@wesleydegroot.nl","username":"0xWDG"},"committer":{"name":"GitHub","email":"noreply@github.com","username":"web-flow"},"added":[],"removed":[],"modified":["AuroraEditor/Base/AppPreferences/Model/Accounts/EditorAccountModel.swift","AuroraEditor/Base/AppPreferences/UI/AccountsPreferences/AccountItemView.swift","AuroraEditor/Base/AppPreferences/UI/AccountsPreferences/AccountSelectionDialog.swift","AuroraEditor/Base/AppPreferences/UI/AccountsPreferences/Login/AuroraEditor/AuroraEditorLoginView.swift","AuroraEditor/Base/AppPreferences/UI/AccountsPreferences/Login/Github/GithubEnterpriseLoginView.swift","AuroraEditor/Base/AppPreferences/UI/AccountsPreferences/Login/Github/GithubLoginView.swift","AuroraEditor/Base/AppPreferences/UI/AccountsPreferences/Login/Gitlab/GitlabHostedLoginView.swift","AuroraEditor/Base/AppPreferences/UI/AccountsPreferences/Login/Gitlab/GitlabLoginView.swift","AuroraEditor/Base/AppPreferences/UI/AccountsPreferences/PreferenceAccountsView.swift","AuroraEditor/Localization/af.lproj/Localizable.strings","AuroraEditor/Localization/cs.lproj/Localizable.strings","AuroraEditor/Localization/cy.lproj/Localizable.strings","AuroraEditor/Localization/da.lproj/Localizable.strings","AuroraEditor/Localization/de.lproj/Localizable.strings","AuroraEditor/Localization/el.lproj/Localizable.strings","AuroraEditor/Localization/en-001.lproj/Localizable.strings","AuroraEditor/Localization/en.lproj/Localizable.strings","AuroraEditor/Localization/es.lproj/Localizable.strings","AuroraEditor/Localization/fi.lproj/Localizable.strings","AuroraEditor/Localization/fil.lproj/Localizable.strings","AuroraEditor/Localization/fr.lproj/Localizable.strings","AuroraEditor/Localization/ga.lproj/Localizable.strings","AuroraEditor/Localization/hi.lproj/Localizable.strings","AuroraEditor/Localization/hr.lproj/Localizable.strings","AuroraEditor/Localization/it.lproj/Localizable.strings","AuroraEditor/Localization/ja.lproj/Localizable.strings","AuroraEditor/Localization/ms.lproj/Localizable.strings","AuroraEditor/Localization/mt.lproj/Localizable.strings","AuroraEditor/Localization/nb.lproj/Localizable.strings","AuroraEditor/Localization/ne.lproj/Localizable.strings","AuroraEditor/Localization/nl.lproj/Localizable.strings","AuroraEditor/Localization/pl.lproj/Localizable.strings","AuroraEditor/Localization/pt-PT.lproj/Localizable.strings","AuroraEditor/Localization/ro.lproj/Localizable.strings","AuroraEditor/Localization/ru.lproj/Localizable.strings","AuroraEditor/Localization/sv.lproj/Localizable.strings","AuroraEditor/Localization/th-TH.lproj/Localizable.strings","AuroraEditor/Localization/th.lproj/Localizable.strings","AuroraEditor/Localization/tn.lproj/Localizable.strings","AuroraEditor/Localization/uk.lproj/Localizable.strings","AuroraEditor/Localization/vi.lproj/Localizable.strings","AuroraEditor/Localization/xh-ZA.lproj/Localizable.strings","AuroraEditor/Localization/zh-HK.lproj/Localizable.strings","AuroraEditor/Localization/zh-Hans.lproj/Localizable.strings","AuroraEditor/Localization/zh-Hant.lproj/Localizable.strings","AuroraEditor/Localization/zu-ZA.lproj/Localizable.strings"]}}
+        )
+
+)
