@@ -17,14 +17,14 @@ if (
             )
         )
     );
-    api(
-        $payload['issue']['url'],
-        json_encode(
-            array(
-                "assignees" => array($user)
-            )
-        )
-    );
+    // api(
+    //     $payload['issue']['url'],
+    //     json_encode(
+    //         array(
+    //             "assignees" => array($user)
+    //         )
+    //     )
+    // );
 
     // Send a message to the user who created the issue.
     api(
@@ -37,10 +37,8 @@ if (
         "POST"
     );
 
-    discord("Issue [#$PRNumber]({$payload['issue']['html_url']}) assigned to $user and set to milestone [#$milestone](https://github.com/AuroraEditor/AuroraEditor/milestone/$milestone).");
-
-    // Enable auto merge
-    // TODO: Make this working.
+    // discord("Issue [#$PRNumber]({$payload['issue']['html_url']}) assigned to $user and set to milestone [#$milestone](https://github.com/AuroraEditor/AuroraEditor/milestone/$milestone).");
+    discord("Issue [#$PRNumber]({$payload['issue']['html_url']}) set to milestone [#$milestone](https://github.com/AuroraEditor/AuroraEditor/milestone/$milestone).");
 
     $AEdidRun = [true, "pr_assign_user", "PR #$PRNumber assigned to $user."];
 }
