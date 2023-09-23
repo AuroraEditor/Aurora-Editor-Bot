@@ -2,10 +2,10 @@
 
 if (
     $payload['action'] == 'opened' &&
-    isset($payload['pull_request'])
+    isset($payload['issue'])
 ) {
-    $PRNumber = $payload['pull_request']['number'];
-    $user = $payload['pull_request']['user']['login'];
+    $PRNumber = $payload['issue']['number'];
+    $user = $payload['issue']['user']['login'];
     $milestone = 1;
 
     // Assign the PR to the user who created it, and set the milestone to 1.
@@ -19,17 +19,17 @@ if (
         )
     );
 
-    // Send a message to the user who created the PR.
+    // Send a message to the user who created the issue.
     api(
-        $payload['pull_request']['issue_url'] . "/comments",
+        $payload['issue']['issue_url'] . "/comments",
         json_encode(
             array(
-                "body" => "Thanks for submitting a pull request!\r\nWe will review it as soon as possible."
+                "body" => "Thanks for submitting a issue!\r\nWe will review it as soon as possible."
             )
         )
     );
 
-    discord("PR [#$PRNumber]({$payload['pull_request']['html_url']}) assigned to $user and set to milestone [#$milestone](https://github.com/AuroraEditor/AuroraEditor/milestone/$milestone).");
+    discord("PR [#$PRNumber]({$payload['issue']['html_url']}) assigned to $user and set to milestone [#$milestone](https://github.com/AuroraEditor/AuroraEditor/milestone/$milestone).");
 
     // Enable auto merge
     // TODO: Make this working.
