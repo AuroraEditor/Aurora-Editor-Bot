@@ -52,8 +52,8 @@ if (isset($_POST['payload'])) {
         $fileName = "gh-action/" . time() . ".txt",
         $_POST['payload']
     );
-    $logURL = "https://wesleydegroot.nl/projects/AEBot/" . $fileName;
-    discord("Log: {$logURL}");
+    // $logURL = "https://wesleydegroot.nl/projects/AEBot/" . $fileName;
+    // discord("Log: {$logURL}");
 
     if (!isset($_POST['payload'])) {
         discord("No payload found.\r\nLog: {$logURL}");

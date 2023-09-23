@@ -37,7 +37,7 @@ if (
         "POST"
     );
 
-    discord("PR [#$PRNumber]({$payload['issue']['html_url']}) assigned to $user and set to milestone [#$milestone](https://github.com/AuroraEditor/AuroraEditor/milestone/$milestone).");
+    discord("Issue [#$PRNumber]({$payload['issue']['html_url']}) assigned to $user and set to milestone [#$milestone](https://github.com/AuroraEditor/AuroraEditor/milestone/$milestone).");
 
     // Enable auto merge
     // TODO: Make this working.
