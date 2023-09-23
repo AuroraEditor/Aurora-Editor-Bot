@@ -10,10 +10,17 @@ if (
 
     // Assign the PR to the user who created it, and set the milestone to 1.
     api(
-        $payload['pull_request']['issue_url'],
+        $payload['issue']['url'],
         json_encode(
             array(
-                "milestone" => $milestone,
+                "milestone" => $milestone
+            )
+        )
+    );
+    api(
+        $payload['issue']['url'],
+        json_encode(
+            array(
                 "assignees" => array($user)
             )
         )
@@ -21,12 +28,13 @@ if (
 
     // Send a message to the user who created the issue.
     api(
-        $payload['issue']['issue_url'] . "/comments",
+        $payload['issue']['url'] . "/comments",
         json_encode(
             array(
                 "body" => "Thanks for submitting a issue!\r\nWe will review it as soon as possible."
             )
-        )
+        ),
+        "POST"
     );
 
     discord("PR [#$PRNumber]({$payload['issue']['html_url']}) assigned to $user and set to milestone [#$milestone](https://github.com/AuroraEditor/AuroraEditor/milestone/$milestone).");

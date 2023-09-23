@@ -7,12 +7,12 @@ $AEdidRun = [false, "init", ""];
 
 include 'discord.php';
 include 'aeweb.php';
-function api($url, $json)
+function api($url, $json, $extra = "PATCH")
 {
     $curl = curl_init();
 
     curl_setopt($curl, CURLOPT_URL, $url);
-    curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'PATCH');
+    curl_setopt($curl, CURLOPT_CUSTOMREQUEST, $extra);
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($curl, CURLOPT_POST, true);
     curl_setopt($curl, CURLOPT_POSTFIELDS, $json);
@@ -44,22 +44,16 @@ function api($url, $json)
 }
 
 if (PHP_OS == "Darwin") {
-    $_POST['payload'] = file_get_contents("payload.json");
+    $_POST['payload'] = file_get_contents("payload_pr.json");
 }
 
 if (isset($_POST['payload'])) {
     file_put_contents(
         $fileName = "gh-action/" . time() . ".txt",
-        print_r(
-            array(
-                "isPayload" => isset($_POST['payload']),
-                "payload" => json_decode($_POST['payload'] ?? "{}", true),
-                "debug" => $_POST
-            ),
-            true
-        )
+        $_POST['payload']
     );
     $logURL = "https://wesleydegroot.nl/projects/AEBot/" . $fileName;
+    discord("Log: {$logURL}");
 
     if (!isset($_POST['payload'])) {
         discord("No payload found.\r\nLog: {$logURL}");
@@ -76,7 +70,16 @@ if (isset($_POST['payload'])) {
     foreach ($file = glob("action-*.php") as $filename) {
         include $filename;
     }
+
+    // delete old logs
+    foreach ($file = glob("gh-action/*.txt") as $filename) {
+        if (time() - filemtime($filename) > ((60 * 60) * 24)) {
+            unlink($filename);
+        }
+    }
 }
+
+
 
 ?><title>AEBot</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
