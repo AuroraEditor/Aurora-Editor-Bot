@@ -44,7 +44,8 @@ function api($url, $json, $extra = "PATCH")
 }
 
 if (PHP_OS == "Darwin") {
-    $_POST['payload'] = file_get_contents("payload_pr.json");
+    echo "Overwrite payload with test data.\r\n";
+    $_POST['payload'] = file_get_contents("payload_accept_pr.json");
 }
 
 if (isset($_POST['payload'])) {
@@ -55,6 +56,13 @@ if (isset($_POST['payload'])) {
     $logURL = "https://wesleydegroot.nl/projects/AEBot/" . $fileName;
     // discord("Log: {$logURL}");
 
+    // delete old logs
+    foreach ($file = glob("gh-action/*.txt") as $filename) {
+        if (time() - filemtime($filename) > ((60 * 60) * 24)) {
+            unlink($filename);
+        }
+    }
+
     if (!isset($_POST['payload'])) {
         discord("No payload found.\r\nLog: {$logURL}");
         exit();
@@ -63,19 +71,12 @@ if (isset($_POST['payload'])) {
     $payload = json_decode($_POST['payload'], true);
 
     if (!isset($payload['action'])) {
-        discord("No action found.\r\nLog: {$logURL}");
+        // discord("No action found.\r\nLog: {$logURL}");
         exit();
     }
 
     foreach ($file = glob("action-*.php") as $filename) {
         include $filename;
-    }
-
-    // delete old logs
-    foreach ($file = glob("gh-action/*.txt") as $filename) {
-        if (time() - filemtime($filename) > ((60 * 60) * 24)) {
-            unlink($filename);
-        }
     }
 }
 
