@@ -85,8 +85,9 @@ function discordErrorHandler(
  */
 function discord($message)
 {
+    global $settings;
     // Default (Reporting channel)
-    $webhookurl = "https://discord.com/api/webhooks/1155095495853752421/-DiXjDDOQEp1xqL1sSElkqnwQN6y4a3CBLwqiQbVdzeLoSCu7sjTtF-5cmGH68H-mYNS";
+    $webhookurl = $settings['discord_webhook'];
 
     if (PHP_OS === 'Darwin') {
         // Do not tag.

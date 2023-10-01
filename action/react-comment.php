@@ -1,17 +1,15 @@
 <?php
 
-$admins = array('0xWDG', 'nanashili');
-
 if (
     $payload['action'] == 'created' &&
     isset($payload['issue']) &&
     isset($payload['comment']) &&
-    preg_match("/\@aurora-editor-bot/", strtolower($payload['comment']['body'] ?? ''))
+    preg_match("/\@" . $settings['username'] . "/", strtolower($payload['comment']['body'] ?? ''))
 ) {
     $PRNumber = $payload['issue']['number'];
     $user = $payload['issue']['user']['login'];
     $repo = $payload['repository']['full_name'];
-    $isAdmin = in_array($user, $admins);
+    $isAdmin = in_array($user, $settings['admins']);
 
     if (preg_match("/please (accept|reject)/", strtolower($payload['comment']['body'] ?? ''), $matches)) {
         $acceptOrReject = $matches[1] ?? 'accept';

@@ -6,6 +6,7 @@ if (
 ) {
     $PRNumber = $payload['pull_request']['number'];
     $user = $payload['pull_request']['user']['login'];
+    $repo = $payload['repository']['full_name'] ?? 'unknown';
     $milestone = 1;
 
     // Assign the PR to the user who created it, and set the milestone to 1.
@@ -37,7 +38,7 @@ if (
         'POST'
     );
 
-    discord("PR [#$PRNumber]({$payload['pull_request']['html_url']}) assigned to $user and set to milestone [#$milestone](https://github.com/AuroraEditor/AuroraEditor/milestone/$milestone).");
+    discord("PR [#$PRNumber]({$payload['pull_request']['html_url']}) in {$repo} is assigned to $user and set to milestone [#$milestone](https://github.com/AuroraEditor/AuroraEditor/milestone/$milestone).");
 
     // Enable auto merge
     // TODO: Make this working.

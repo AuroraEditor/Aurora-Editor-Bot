@@ -6,6 +6,7 @@ if (
 ) {
     $PRNumber = $payload['issue']['number'];
     $user = $payload['issue']['user']['login'];
+    $repo = $payload['repository']['full_name'] ?? 'unknown';
     $milestone = 1;
 
     // Assign the PR to the user who created it, and set the milestone to 1.
@@ -38,7 +39,7 @@ if (
     );
 
     // discord("Issue [#$PRNumber]({$payload['issue']['html_url']}) assigned to $user and set to milestone [#$milestone](https://github.com/AuroraEditor/AuroraEditor/milestone/$milestone).");
-    discord("Issue [#$PRNumber]({$payload['issue']['html_url']}) set to milestone [#$milestone](https://github.com/AuroraEditor/AuroraEditor/milestone/$milestone).");
+    discord("Issue [#$PRNumber]({$payload['issue']['html_url']}) in {$repo} set to milestone [#$milestone](https://github.com/AuroraEditor/AuroraEditor/milestone/$milestone).");
 
     $AEdidRun = [true, "pr_assign_user", "PR #$PRNumber assigned to $user."];
 }

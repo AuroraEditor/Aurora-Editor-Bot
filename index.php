@@ -5,10 +5,16 @@ ini_set('display_errors', 1);
 $AEweb = false;
 $AEdidRun = [false, "init", ""];
 
+include 'config.php';
+
+if (!isset($settings)) {
+    exit("I cannot continue without settings, please see config.sample.php for an example.");
+}
+
 include 'discord.php';
-include 'aeweb.php';
 function api($url, $json, $extra = "PATCH")
 {
+    global $settings;
     $curl = curl_init();
 
     curl_setopt($curl, CURLOPT_URL, $url);
@@ -23,7 +29,7 @@ function api($url, $json, $extra = "PATCH")
         array(
             "User-Agent: Aurora Editor Bot",
             "Accept: application/vnd.github+json",
-            "Authorization: Bearer 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",
+            "Authorization: Bearer {$settings['github_token']}",
             "X-GitHub-Api-Version: 2022-11-28"
         )
     );
@@ -45,7 +51,7 @@ function api($url, $json, $extra = "PATCH")
 
 if (PHP_OS == "Darwin") {
     echo "Overwrite payload with test data.\r\n";
-    $_POST['payload'] = file_get_contents("payload_accept_pr.json");
+    $_POST['payload'] = file_get_contents("payload/accept_pr.json");
 }
 
 if (isset($_POST['payload'])) {
@@ -53,7 +59,7 @@ if (isset($_POST['payload'])) {
         $fileName = "gh-action/" . time() . ".txt",
         $_POST['payload']
     );
-    $logURL = "https://wesleydegroot.nl/projects/AEBot/" . $fileName;
+    $logURL = $settings['serverURL'] . $fileName;
     // discord("Log: {$logURL}");
 
     // delete old logs
@@ -75,35 +81,9 @@ if (isset($_POST['payload'])) {
         exit();
     }
 
-    foreach ($file = glob("action-*.php") as $filename) {
+    foreach ($file = glob("action/*.php") as $filename) {
         include $filename;
     }
 }
 
-
-
-?><title>AEBot</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
-<!-- <link rel="stylesheet" href="https://unpkg.com/mvp.css"> -->
-
-<h1>PR Reviewer</h1>
-
-<form method="post">
-    <label for="event">Event</label>
-    <select name="event">
-        <option value="APPROVE">APPROVE</option>
-        <option value="REQUEST_CHANGES">REQUEST_CHANGES</option>
-        <option value="COMMENT">COMMENT</option>
-    </select><br />
-
-    <label for="PRNumber">PR Number</label>
-    <input type="text" name="PRNumber" placeholder="PR Number">
-    <br />
-
-    <label for="message">Message</label>
-    <input type="text" name="message" placeholder="message" value="LGTM">
-    <br />
-
-    <label for="submit">Submit</label>
-    <input type="submit" value="submit">
-</form>
+header("location: /");
