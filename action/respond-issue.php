@@ -32,7 +32,7 @@ if (
         $payload['issue']['url'] . "/comments",
         json_encode(
             array(
-                "body" => "Thanks for submitting a issue!\r\nWe will review it as soon as possible."
+                "body" => "Thanks for submitting a issue!"
             )
         ),
         "POST"
