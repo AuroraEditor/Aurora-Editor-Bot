@@ -18,21 +18,13 @@ if (
             )
         )
     );
-    // api(
-    //     $payload['issue']['url'],
-    //     json_encode(
-    //         array(
-    //             "assignees" => array($user)
-    //         )
-    //     )
-    // );
 
     // Send a message to the user who created the issue.
     api(
         $payload['issue']['url'] . "/comments",
         json_encode(
             array(
-                "body" => "Thanks for submitting a issue!"
+                "body" => "Thanks for submitting a issue!\r\nto assign this issue to yourself please comment `@{$settings['username']} please assign me`"
             )
         ),
         "POST"
