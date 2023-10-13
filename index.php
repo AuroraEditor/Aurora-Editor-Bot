@@ -56,16 +56,18 @@ if (PHP_OS == "Darwin") {
 
 if (isset($_POST['payload'])) {
     file_put_contents(
-        $fileName = "gh-action/" . time() . ".txt",
+        $fileName = "gh-action/" . time() . ".json",
         $_POST['payload']
     );
     $logURL = $settings['serverURL'] . $fileName;
     // discord("Log: {$logURL}");
 
     // delete old logs
-    foreach ($file = glob("gh-action/*.txt") as $filename) {
+    foreach ($file = glob("gh-action/*.json") as $filename) {
         if (time() - filemtime($filename) > ((60 * 60) * 24)) {
-            unlink($filename);
+            if (file_exists($filename)) {
+                unlink($filename);
+            }
         }
     }
 

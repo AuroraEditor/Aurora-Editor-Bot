@@ -30,9 +30,12 @@ if (
 
     if (
         preg_match("/\@" . $settings['username'] . "/", strtolower($payload['comment']['body'] ?? '')) &&
-        preg_match("/please (accept|reject)/", strtolower($payload['comment']['body'] ?? ''), $matches)
+        preg_match("/please (accept|approve|reject)/", strtolower($payload['comment']['body'] ?? ''), $matches)
     ) {
-        $acceptOrReject = $matches[1] ?? 'accept';
+        $acceptOrReject = in_array(
+            $matches[1] ?? 'accept',
+            ['accept', 'approve']
+        ) ? 'accept' : 'reject';
 
         discord(
             sprintf(
