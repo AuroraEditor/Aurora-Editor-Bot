@@ -104,7 +104,7 @@ function discord($message)
             "avatar_url" => "https://avatars.githubusercontent.com/u/106490518?s=200&v=4",
 
             // Message
-            "content" => $message,
+            "content" => $message
         ],
         JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE
     );

@@ -88,4 +88,6 @@ if (isset($_POST['payload'])) {
     }
 }
 
-header("location: /");
+if (!headers_sent()) {
+    header("location: /");
+}
