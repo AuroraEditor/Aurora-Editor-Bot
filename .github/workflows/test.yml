@@ -12,7 +12,7 @@ jobs:
       - name: Create config.php
         env:
           WEBHOOK: ${{ secrets.DISCORD_TEST_HOOK }}
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TOKEN: ${{ secrets.BOT_TOKEN }}
         run: |
           echo "<?php
           \$settings = array(
