@@ -11,6 +11,8 @@ if (!isset($settings)) {
     exit("I cannot continue without settings, please see config.sample.php for an example.");
 }
 
+print_r($settings);
+
 include 'discord.php';
 function api($url, $json, $extra = "PATCH")
 {
