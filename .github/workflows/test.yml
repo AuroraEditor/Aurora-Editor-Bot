@@ -16,11 +16,11 @@ jobs:
         run: |
           echo "<?php
           \$settings = array(
-              "username" => "aurora-editor-bot",
-              "admins" => array("0xWDG"),
-              "github_token" => "$TOKEN",
-              "discord_webhook" => "$WEBHOOK",
-              "serverURL" => "https://apps.wesleydegroot.nl/AuroraEditorBot/"
+              \"username" => \"aurora-editor-bot\",
+              \"admins" => array(\"0xWDG\"),
+              \"github_token" => \"$TOKEN\",
+              \"discord_webhook" => \"$WEBHOOK\",
+              \"serverURL\" => \"https://apps.wesleydegroot.nl/AuroraEditorBot/\"
           );" > config.php
 
       - name: Run test (accept_pr.json)
