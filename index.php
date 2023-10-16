@@ -49,9 +49,20 @@ function api($url, $json, $extra = "PATCH")
     curl_close($curl);
 }
 
-if (PHP_OS == "Darwin") {
-    echo "Overwrite payload with test data.\r\n";
-    $_POST['payload'] = file_get_contents("payload/accept_pr.json");
+if (PHP_SAPI === 'cli') {
+    if (!isset($argv[1])) {
+        echo "Please use php {$argv[0]} payload.json";
+        exit(2);
+    } else {
+        $file = "payload/". $argv[1];
+        if (file_exists($file) && !preg_match("/\.\./", $file)) {
+            echo "Overwrite payload with test data from payload/{$argv[1]}.\r\n";
+            $_POST['payload'] = file_get_contents($file);
+        } else {
+            echo file_exists($file) ? "File contains invalid characters" : "File {$file} not found";
+            exit(3);
+        }
+    }
 }
 
 if (isset($_POST['payload'])) {
