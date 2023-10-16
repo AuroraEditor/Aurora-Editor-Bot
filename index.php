@@ -69,8 +69,8 @@ if (isset($_POST['payload'])) {
 
     // delete old logs
     foreach ($file = glob("gh-action/*.json") as $filename) {
-        if (time() - filemtime($filename) > ((60 * 60) * 24)) {
-            if (file_exists($filename)) {
+        if (file_exists($filename)) {
+            if (time() - filemtime($filename) > ((60 * 60) * 24)) {
                 unlink($filename);
             }
         }
