@@ -12,13 +12,13 @@ jobs:
       - name: Create config.php
         env:
           WEBHOOK: ${{ secrets.DISCORD_TEST_HOOK }}
-          TOKEN: ${{ secrets.BOT_TOKEN }}
+          BOTTOKEN: ${{ secrets.BOT_TOKEN }}
         run: |
           echo "<?php
           \$settings = array(
               \"username\" => \"aurora-editor-bot\",
               \"admins\" => array(\"0xWDG\"),
-              \"github_token\" => \"$TOKEN\",
+              \"github_token\" => \"$BOTTOKEN\",
               \"discord_webhook\" => \"$WEBHOOK\",
               \"serverURL\" => \"https://apps.wesleydegroot.nl/AuroraEditorBot/\"
           );" > config.php
