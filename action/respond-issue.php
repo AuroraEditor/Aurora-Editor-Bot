@@ -31,7 +31,7 @@ if (
     );
 
     // discord("Issue [#$PRNumber]({$payload['issue']['html_url']}) assigned to $user and set to milestone [#$milestone](https://github.com/AuroraEditor/AuroraEditor/milestone/$milestone).");
-    discord("Issue [#$PRNumber]({$payload['issue']['html_url']}) in [{$repo}](<https://github.com/{$repo}>) set to milestone [#$milestone](<https://github.com/{$repo}/milestone/$milestone>).");
+    discord("Issue [#$PRNumber](<{$payload['issue']['html_url']}>) in [{$repo}](<https://github.com/{$repo}>) set to milestone [#$milestone](<https://github.com/{$repo}/milestone/$milestone>).");
 
     $AEdidRun = [true, "pr_assign_milestone", "PR #{$PRNumber} assigned to milestone #{$milestone}."];
 }
