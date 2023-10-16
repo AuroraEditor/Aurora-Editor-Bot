@@ -30,7 +30,6 @@ create a config.php file in the root directory with the following contents:
 
 ```php
 <?php
-// Rename me to config.php after you've filled in the settings.
 $settings = array(
     "username" => "my-bot-name",
     "admins" => array(
@@ -46,6 +45,7 @@ $settings = array(
 > **Note**\
 > Change all values to your own settins/values.
 
+# Run the webhook
 Upload this to your server and serve it with PHP. 
 
 # Tests
@@ -53,8 +53,8 @@ Upload this to your server and serve it with PHP.
 This section tells you how to test different payloads.
 
 > **Note**\
-> Those payloads may not work in your environment.<br/>
-> if you have not the rights to AuroraEditor/Aurora-Editor-Bot.
+> Some payloads may not work in your environment.<br/>
+> if you have not the correct rights to [AuroraEditor/Aurora-Editor-Bot](https://github.com/AuroraEditor/Aurora-Editor-Bot).
 
 ### Run all tests
 ```bash
