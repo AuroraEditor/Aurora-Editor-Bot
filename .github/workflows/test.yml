@@ -16,8 +16,8 @@ jobs:
         run: |
           echo "<?php
           \$settings = array(
-              \"username" => \"aurora-editor-bot\",
-              \"admins" => array(\"0xWDG\"),
+              \"username\" => \"aurora-editor-bot\",
+              \"admins\" => array(\"0xWDG\"),
               \"github_token" => \"$TOKEN\",
               \"discord_webhook" => \"$WEBHOOK\",
               \"serverURL\" => \"https://apps.wesleydegroot.nl/AuroraEditorBot/\"
