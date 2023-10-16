@@ -72,7 +72,7 @@ function discordErrorHandler(
             break;
     }
 
-    discord("**PHP {$errorType}**: <@918438083861573692> ```\r\n{$errorString}\r\n```\r\nin `{$errorFile}` on line `{$errorLine}`");
+    discord("**PHP {$errorType}**: <@&918438083861573692> ```\r\n{$errorString}\r\n```\r\nin `{$errorFile}` on line `{$errorLine}`");
 }
 
 /**

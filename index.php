@@ -40,12 +40,6 @@ function api($url, $json, $extra = "PATCH")
         discord('Error:' . curl_error($curl));
     }
 
-    if (PHP_OS == "Darwin") {
-        discord("URL: " . $url);
-        discord("JSON: " . $json);
-        discord("Result: " . substr($result, 0, 1000) . "...");
-    }
-
     curl_close($curl);
 }
 
@@ -54,7 +48,7 @@ if (PHP_SAPI === 'cli') {
         echo "Please use php {$argv[0]} payload.json";
         exit(2);
     } else {
-        $file = "payload/". $argv[1];
+        $file = "payload/" . $argv[1];
         if (file_exists($file) && !preg_match("/\.\./", $file)) {
             echo "Overwrite payload with test data from payload/{$argv[1]}.\r\n";
             $_POST['payload'] = file_get_contents($file);
