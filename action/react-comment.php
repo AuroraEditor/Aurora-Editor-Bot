@@ -4,7 +4,7 @@ if (
     $payload['action'] == 'created' &&
     isset($payload['issue']) &&
     isset($payload['comment']) &&
-    $payload['comment']['user']['login'] != $settings['username']
+    (PHP_SAPI !== 'cli' ? $payload['comment']['user']['login'] != $settings['username'] : true)
 ) {
     $PRNumber = $payload['issue']['number'];
     $user = $payload['comment']['user']['login'];
