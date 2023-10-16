@@ -11,23 +11,34 @@ jobs:
       - uses: actions/checkout@v3
       - name: Create config.php
         run: |
-          echo "<?php
+          echo "<?php 
           \$settings = array(
               \"username\" => \"aurora-editor-bot\",
               \"admins\" => array(\"0xWDG\"),
               \"github_token\" => \"${{ secrets.BOT_TOKEN }}\",
               \"discord_webhook\" => \"${{ secrets.DISCORD_TEST_HOOK }}\",
-              \"serverURL\" => \"https://apps.wesleydegroot.nl/AuroraEditorBot/\"
+              \"serverURL\" => \"https://auroraeditor.github.io/AuroraEditor/AuroraEditorBot/\"
           );" > config.php
 
       - name: Run test (accept_pr.json)
-        run: php index.php accept_pr.json
+        run: |
+          php index.php accept_pr.json
+          sleep 5
 
       - name: Run test (issue.json)
-        run: php index.php issue.json
+        run: |
+          php index.php issue.json
+          sleep 5
 
       - name: Run test (please_assign_me.json)
-        run: php index.php please_assign_me.json
+        run: |
+          php index.php please_assign_me.json
+          sleep 5
 
       - name: Run test (pr.json)
-        run: php index.php pr.json
+        run: |
+          php index.php pr.json
+          sleep 5
+
+      - name: Remove config.php
+        run: rm config.php
