@@ -1,3 +1,4 @@
 config.php
 *.tmp
 gh-action/*.txt
+gh-action/*.json
