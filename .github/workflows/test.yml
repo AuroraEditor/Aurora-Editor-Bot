@@ -20,25 +20,25 @@ jobs:
               \"serverURL\" => \"https://auroraeditor.github.io/AuroraEditor/AuroraEditorBot/\"
           );" > config.php
 
-      - name: Run test (accept_pr.json)
-        run: |
-          php index.php accept_pr.json
-          sleep 5
-
       - name: Run test (issue.json)
         run: |
           php index.php issue.json
-          sleep 5
+          sleep 2
 
       - name: Run test (please_assign_me.json)
         run: |
           php index.php please_assign_me.json
-          sleep 5
-
+          sleep 2
+          
       - name: Run test (pr.json)
         run: |
           php index.php pr.json
-          sleep 5
+          sleep 2
+          
+      - name: Run test (accept_pr.json)
+        run: |
+          php index.php accept_pr.json
+          sleep 2
 
       - name: Remove config.php
         run: rm config.php
