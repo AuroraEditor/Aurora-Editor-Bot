@@ -15,7 +15,7 @@ if (
         preg_match("/please(.*)assign(.*)me/", strtolower($payload['comment']['body'] ?? ''))
     ) {
         discord(
-            "Issue [{$repo}](https://github.com/{$repo}) [#$PRNumber]({$payload['issue']['html_url']}) is assigned to [{$user}](https://github.com/{$user})."
+            "Issue [{$repo}](<https://github.com/{$repo}>) [#$PRNumber](<{$payload['issue']['html_url']}>) is assigned to [{$user}](<https://github.com/{$user}>)."
         );
 
         api(
@@ -39,7 +39,7 @@ if (
 
         discord(
             sprintf(
-                "PR [{$repo}](https://github.com/{$repo}) [#$PRNumber]({$payload['issue']['html_url']}) %s [{$user}](https://github.com/{$user}).",
+                "PR [{$repo}](<https://github.com/{$repo}>) [#$PRNumber](<{$payload['issue']['html_url']}>) %s [{$user}](<https://github.com/{$user}>).",
                 $isAdmin ? "is {$acceptOrReject}ed by" : "is not {$acceptOrReject}ed for"
             )
         );
