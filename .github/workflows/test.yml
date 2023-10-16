@@ -10,16 +10,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Create config.php
-        env:
-          WEBHOOK: ${{ secrets.DISCORD_TEST_HOOK }}
-          BOTTOKEN: ${{ secrets.BOT_TOKEN }}
         run: |
           echo "<?php
           \$settings = array(
               \"username\" => \"aurora-editor-bot\",
               \"admins\" => array(\"0xWDG\"),
-              \"github_token\" => \"$BOTTOKEN\",
-              \"discord_webhook\" => \"$WEBHOOK\",
+              \"github_token\" => \"${{ secrets.BOT_TOKEN }}\",
+              \"discord_webhook\" => \"${{ secrets.DISCORD_TEST_HOOK }}\",
               \"serverURL\" => \"https://apps.wesleydegroot.nl/AuroraEditorBot/\"
           );" > config.php
 
