@@ -55,9 +55,6 @@ if (
                 ),
                 'POST'
             );
-
-            // Delete comment after use.
-            api($payload['comment']['url'], null, 'DELETE');
         } else {
             api(
                 $payload['issue']['comments_url'],
@@ -69,7 +66,10 @@ if (
                 'POST'
             );
         }
+
+        // Delete comment after use.
+        api($payload['comment']['url'], null, 'DELETE');
     }
 
-    $AEdidRun = [true, "issue_accept_pr", "PR $repo #$PRNumber assigned to $user."];
+    $AEdidRun[] = [true, "issue_accept_pr", "PR $repo #$PRNumber assigned to $user."];
 }
