@@ -55,6 +55,9 @@ if (
                 ),
                 'POST'
             );
+
+            // Delete comment after use.
+            api($payload['comment']['url'], null, 'DELETE');
         } else {
             api(
                 $payload['issue']['comments_url'],
