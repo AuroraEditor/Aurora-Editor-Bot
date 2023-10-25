@@ -43,5 +43,5 @@ if (
     // Enable auto merge
     // TODO: Make this working.
 
-    $AEdidRun = [true, "pr_assign_user", "PR #$PRNumber assigned to $user."];
+    $AEdidRun[] = [true, "open_pr_action", "PR #$PRNumber assigned to $user."];
 }
