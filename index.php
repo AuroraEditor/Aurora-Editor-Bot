@@ -3,7 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 $AEweb = false;
-$AEdidRun = [false, "init", ""];
+$AEdidRun = array([true, "init", ""]);
 
 include 'config.php';
 
@@ -63,20 +63,33 @@ if (PHP_SAPI === 'cli') {
 }
 
 if (isset($_POST['payload'])) {
+    // Save payload log for traceability
     file_put_contents(
         $fileName = "gh-action/" . time() . ".json",
         $_POST['payload']
     );
+
+    // The log URL.
     $logURL = $settings['serverURL'] . $fileName;
     // discord("Log: {$logURL}");
 
     // delete old logs
     foreach ($file = glob("gh-action/*.json") as $filename) {
+
+        // Disable error reporting
+        error_reporting(0);
+
+        // Check if file exists
         if (file_exists($filename)) {
+            // If older than 24hours, then delete
             if (time() - filemtime($filename) > ((60 * 60) * 24)) {
+                // Delete
                 unlink($filename);
             }
         }
+
+        // Enable error reporting
+        error_reporting(E_ALL);
     }
 
     if (!isset($_POST['payload'])) {
@@ -84,6 +97,7 @@ if (isset($_POST['payload'])) {
         exit();
     }
 
+    // Create $payload
     $payload = json_decode($_POST['payload'], true);
 
     if (!isset($payload['action'])) {
