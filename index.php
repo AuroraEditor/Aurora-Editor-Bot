@@ -20,9 +20,9 @@ function api($url, $json = null, $extra = "PATCH")
     curl_setopt($curl, CURLOPT_URL, $url);
     curl_setopt($curl, CURLOPT_CUSTOMREQUEST, $extra);
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($curl, CURLOPT_POST, true);
 
     if (is_array($json)) {
-        curl_setopt($curl, CURLOPT_POST, true);
         curl_setopt($curl, CURLOPT_POSTFIELDS, $json);
     }
 
@@ -44,6 +44,8 @@ function api($url, $json = null, $extra = "PATCH")
     }
 
     curl_close($curl);
+
+    return $result;
 }
 
 if (PHP_SAPI === 'cli') {
