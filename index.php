@@ -12,7 +12,7 @@ if (!isset($settings)) {
 }
 
 include 'discord.php';
-function api($url, $json, $extra = "PATCH")
+function api($url, $json = null, $extra = "PATCH")
 {
     global $settings;
     $curl = curl_init();
@@ -22,9 +22,9 @@ function api($url, $json, $extra = "PATCH")
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($curl, CURLOPT_POST, true);
 
-    // if (is_array($json)) {
-    curl_setopt($curl, CURLOPT_POSTFIELDS, $json);
-    // }
+    if (is_array($json)) {
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $json);
+    }
 
     curl_setopt(
         $curl,
