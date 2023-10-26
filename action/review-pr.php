@@ -12,23 +12,6 @@ if (
     $isAdmin = in_array($user, $settings['admins']);
 
     if (
-        preg_match("/please(.*)assign(.*)me/", strtolower($payload['comment']['body'] ?? ''))
-    ) {
-        discord(
-            "Issue [{$repo}](<https://github.com/{$repo}>) [#$PRNumber](<{$payload['issue']['html_url']}>) is assigned to [{$user}](<https://github.com/{$user}>)."
-        );
-
-        api(
-            $payload['issue']['url'],
-            json_encode(
-                array(
-                    "assignees" => array($user)
-                )
-            )
-        );
-    }
-
-    if (
         preg_match("/\@" . $settings['username'] . "/", strtolower($payload['comment']['body'] ?? '')) &&
         preg_match("/please (accept|approve|reject)/", strtolower($payload['comment']['body'] ?? ''), $matches)
     ) {
@@ -45,7 +28,28 @@ if (
         );
 
         if ($isAdmin) {
-            api(
+            // Check for pending reviews and delete them.
+            $pending_reviews = api(
+                $payload['issue']['pull_request']['url'] . '/reviews',
+                null,
+                'GET'
+            );
+
+            $json = json_decode($pending_reviews, true);
+
+            if (is_array($json)) {
+                foreach ($json as $review) {
+                    if ($review['state'] == 'PENDING') {
+                        api(
+                            $payload['issue']['pull_request']['url'] . '/reviews/' . $review['id'],
+                            null,
+                            'DELETE'
+                        );
+                    }
+                }
+            }
+
+            $api_review = api(
                 $payload['issue']['pull_request']['url'] . '/reviews',
                 json_encode(
                     array(
@@ -66,7 +70,10 @@ if (
                 'POST'
             );
         }
+
+        // Delete comment after use.
+        api($payload['comment']['url'], null, 'DELETE');
     }
 
-    $AEdidRun = [true, "issue_accept_pr", "PR $repo #$PRNumber assigned to $user."];
+    $AEdidRun[] = [true, "review_pr", "PR $repo #$PRNumber assigned to $user."];
 }

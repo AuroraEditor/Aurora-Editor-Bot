@@ -14,7 +14,7 @@ function discordCheckForFatal()
 
     if (isset($error['type']) && $error['type'] == E_ERROR) {
         discord(
-            "**PHP Fatal error**: <@&918204902373744710> " .
+            "**PHP Fatal error**: <@918438083861573692> " .
                 "```\r\n{$error['message']}\r\n```\r\n" .
                 "in `{$error['file']}` on line `{$error['line']}`"
         );
