@@ -15,7 +15,6 @@ if (
         preg_match("/\@" . $settings['username'] . "/", strtolower($payload['comment']['body'] ?? '')) &&
         preg_match("/please (accept|approve|reject)/", strtolower($payload['comment']['body'] ?? ''), $matches)
     ) {
-        print("Should do something...");
         $acceptOrReject = in_array(
             $matches[1] ?? 'accept',
             ['accept', 'approve']
@@ -29,8 +28,28 @@ if (
         );
 
         if ($isAdmin) {
-            print("Accepting...");
-            discord(api(
+            // Check for pending reviews and delete them.
+            $pending_reviews = api(
+                $payload['issue']['pull_request']['url'] . '/reviews',
+                null,
+                'GET'
+            );
+
+            $json = json_decode($pending_reviews, true);
+
+            if (is_array($json)) {
+                foreach ($json as $review) {
+                    if ($review['state'] == 'PENDING') {
+                        api(
+                            $payload['issue']['pull_request']['url'] . '/reviews/' . $review['id'],
+                            null,
+                            'DELETE'
+                        );
+                    }
+                }
+            }
+
+            $api_review = api(
                 $payload['issue']['pull_request']['url'] . '/reviews',
                 json_encode(
                     array(
@@ -39,7 +58,7 @@ if (
                     )
                 ),
                 'POST'
-            ));
+            );
         } else {
             api(
                 $payload['issue']['comments_url'],
@@ -53,7 +72,7 @@ if (
         }
 
         // Delete comment after use.
-        // api($payload['comment']['url'], null, 'DELETE');
+        api($payload['comment']['url'], null, 'DELETE');
     }
 
     $AEdidRun[] = [true, "review_pr", "PR $repo #$PRNumber assigned to $user."];
