@@ -21,10 +21,7 @@ function api($url, $json = null, $extra = "PATCH")
     curl_setopt($curl, CURLOPT_CUSTOMREQUEST, $extra);
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($curl, CURLOPT_POST, true);
-
-    if (is_array($json)) {
-        curl_setopt($curl, CURLOPT_POSTFIELDS, $json);
-    }
+    curl_setopt($curl, CURLOPT_POSTFIELDS, $json ?? "");
 
     curl_setopt(
         $curl,
