@@ -30,7 +30,7 @@ if (
         "POST"
     );
 
-    discord("Issue [#$PRNumber](<{$payload['issue']['html_url']}>) in [{$repo}](<https://github.com/{$repo}>) set to milestone [#$milestone](<https://github.com/{$repo}/milestone/$milestone>).");
+    discord("Issue [{$repo}](<https://github.com/{$repo}>) [#$PRNumber](<{$payload['issue']['html_url']}>) set to milestone [#$milestone](<https://github.com/{$repo}/milestone/$milestone>).");
 
     $AEdidRun[] = [true, "pr_assign_milestone", "PR #{$PRNumber} assigned to milestone #{$milestone}."];
 }

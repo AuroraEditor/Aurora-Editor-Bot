@@ -38,7 +38,7 @@ if (
         'POST'
     );
 
-    discord("PR [#$PRNumber](<{$payload['pull_request']['html_url']}>) in [{$repo}](<https://github.com/{$repo}>) is assigned to [$user](<https://github.com/$user>) and set to milestone [#$milestone](<https://github.com/{$repo}/milestone/$milestone>).");
+    discord("PR [{$repo}](<https://github.com/{$repo}>) [#$PRNumber](<{$payload['pull_request']['html_url']}>) is assigned to [$user](<https://github.com/$user>) and set to milestone [#$milestone](<https://github.com/{$repo}/milestone/$milestone>).");
 
     // Enable auto merge
     // TODO: Make this working.
