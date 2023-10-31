@@ -45,6 +45,11 @@ jobs:
           php index.php pr_accept.json
           sleep 2
 
+      - name: Run test (pr_closed.json)
+        run: |
+          php index.php pr_closed.json
+          sleep 2
+
       - name: Run test (pr_merged.json)
         run: |
           php index.php pr_merged.json

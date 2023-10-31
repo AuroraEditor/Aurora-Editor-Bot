@@ -21,18 +21,7 @@ if (
             ),
             'POST'
         );
-    } else {
-        api(
-            $payload['pull_request']['comments_url'],
-            json_encode(
-                array(
-                    "body" => "Hey @{$user},\r\n\r\nThanks for your contribution.\r\nYour PR has not been merged!\r\nPlease read the above comments why your pull request was not accepted.\r\n\r\nThanks again for your contribution!\r\n\r\nKind Regards,\r\nAurora Editor Team."
-                )
-            ),
-            'POST'
-        );
     }
-
 
     $AEdidRun[] = [true, "pr_closed_message", "PR $repo #$PRNumber Closing message to $user."];
 }

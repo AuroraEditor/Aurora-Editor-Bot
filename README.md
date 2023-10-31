@@ -80,13 +80,41 @@ This simulates a new PR [Aurora-Editor-Bot #25](https://github.com/AuroraEditor/
 ```bash
 php index.php pr.json
 ```
-          
-#### Run test (accept_pr.json)
+
+
+#### Run test (pr_reject.json)
+This simulates a new comment in [Aurora-Editor-Bot #25](https://github.com/AuroraEditor/Aurora-Editor-Bot/pull/25) from an admin saying `@aurora-editor-bot please reject this pr.`.
+
+> **Warning**\
+> This will not execute if `my-bot-name` is not an admin.
+
+```bash
+php index.php pr_reject.json
+```
+
+
+#### Run test (pr_accept.json)
 This simulates a new comment in [Aurora-Editor-Bot #25](https://github.com/AuroraEditor/Aurora-Editor-Bot/pull/25) from an admin saying `@aurora-editor-bot please accept this pr.`.
 
 > **Warning**\
 > This will not execute if `my-bot-name` is not an admin.
 
 ```bash
-php index.php accept_pr.json
+php index.php pr_accept.json
+```
+
+
+#### Run test (pr_closed.json)
+This simulates the [Aurora-Editor-Bot #25](https://github.com/AuroraEditor/Aurora-Editor-Bot/pull/25) being closed without merge, this should not trigger any action.
+
+```bash
+php index.php pr_closed.json
+```
+
+
+#### Run test (pr_merged.json)
+This simulates the [Aurora-Editor-Bot #25](https://github.com/AuroraEditor/Aurora-Editor-Bot/pull/25) being merged.
+
+```bash
+php index.php pr_merged.json
 ```

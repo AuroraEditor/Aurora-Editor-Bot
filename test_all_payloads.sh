@@ -23,6 +23,11 @@ sleep 2
 php index.php pr_accept.json
 sleep 2
 
+
+# Run test (pr_closed.json)
+php index.php pr_closed.json
+sleep 2
+
 # Run test (pr_merged.json)
 php index.php pr_merged.json
 sleep 2
