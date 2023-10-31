@@ -46,9 +46,9 @@ jobs:
           sleep 2
 
       - name: Run test (pr_merged.json)
-      run: |
-        php index.php pr_merged.json
-        sleep 2
+        run: |
+          php index.php pr_merged.json
+          sleep 2
 
       - name: Remove config.php
         run: rm config.php
