@@ -10,7 +10,7 @@ if (
     $merged = $payload['pull_request']['merged'] ?? false;
 
     if ($merged) {
-        discord("PR $repo #$PRNumber is accepted! Closing message to $user.");
+        discord("PR [{$repo}](<https://github.com/{$repo}>) [#$PRNumber](<{$payload['pull_request']['html_url']}>) is accepted! Closing message to [{$user}](<https://github.com/{$user}>).");
 
         api(
             $payload['pull_request']['comments_url'],
