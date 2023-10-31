@@ -15,10 +15,14 @@ sleep 2
 php index.php pr.json
 sleep 2
 
-# Run test (reject_pr.json)
-php index.php reject_pr.json
+# Run test (pr_reject.json)
+php index.php pr_reject.json
 sleep 2
 
-# Run test (accept_pr.json)
-php index.php accept_pr.json
+# Run test (pr_accept.json)
+php index.php pr_accept.json
+sleep 2
+
+# Run test (pr_merged.json)
+php index.php pr_merged.json
 sleep 2
