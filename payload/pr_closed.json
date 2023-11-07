@@ -14,7 +14,7 @@
         "locked": false,
         "title": "AuroraEditor Bot Test Pull Request.",
         "user": {
-            "login": "aurora-editor-bot",
+            "login": "aurora-editor-bear",
             "id": 123369531,
             "node_id": "U_kgDOB1p4Ow",
             "avatar_url": "https://avatars.githubusercontent.com/u/123369531?v=4",
@@ -33,7 +33,7 @@
             "type": "User",
             "site_admin": false
         },
-        "body": "This PR will always be used for @aurora-editor-bot to test actions.",
+        "body": "This PR will always be used for @aurora-editor-bear to test actions.",
         "created_at": "2023-10-16T19:22:27Z",
         "updated_at": "2023-10-16T19:22:27Z",
         "closed_at": "2023-10-16T19:22:27Z",
@@ -495,7 +495,7 @@
         "description": "Project of the @Aurora-Company."
     },
     "sender": {
-        "login": "aurora-editor-bot",
+        "login": "aurora-editor-bear",
         "id": 123369531,
         "node_id": "U_kgDOB1p4Ow",
         "avatar_url": "https://avatars.githubusercontent.com/u/123369531?v=4",
