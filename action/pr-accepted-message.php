@@ -21,6 +21,16 @@ if (
             ),
             'POST'
         );
+
+        api(
+            $url = "https://api.github.com/orgs/AuroraEditor/teams/contributors/memberships/" . $user,
+            json_encode(
+                array(
+                    "role" => "member"
+                )
+            ),
+            "PUT"
+        );
     }
 
     $AEdidRun[] = [true, "pr_closed_message", "PR $repo #$PRNumber Closing message to $user."];
