@@ -12,7 +12,7 @@
         "number": 24,
         "title": "Aurora Editor Bot Test Issue.",
         "user": {
-            "login": "aurora-editor-bear",
+            "login": "aurora-care-bear",
             "id": 123369531,
             "node_id": "U_kgDOB1p4Ow",
             "avatar_url": "https://avatars.githubusercontent.com/u/123369531?v=4",
@@ -43,7 +43,7 @@
         "closed_at": null,
         "author_association": "MEMBER",
         "active_lock_reason": null,
-        "body": "This issue will always be used for automated tests of @aurora-editor-bear",
+        "body": "This issue will always be used for automated tests of @aurora-care-bear",
         "reactions": {
             "url": "https://api.github.com/repos/AuroraEditor/Aurora-Editor-Bot/issues/24/reactions",
             "total_count": 0,
@@ -180,7 +180,7 @@
         "description": "Project of the @Aurora-Company."
     },
     "sender": {
-        "login": "aurora-editor-bear",
+        "login": "aurora-care-bear",
         "id": 123369531,
         "node_id": "U_kgDOB1p4Ow",
         "avatar_url": "https://avatars.githubusercontent.com/u/123369531?v=4",
