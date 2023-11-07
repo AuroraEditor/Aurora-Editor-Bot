@@ -40,8 +40,20 @@ if (
 
     discord("PR [{$repo}](<https://github.com/{$repo}>) [#$PRNumber](<{$payload['pull_request']['html_url']}>) is assigned to [$user](<https://github.com/$user>) and set to milestone [#$milestone](<https://github.com/{$repo}/milestone/$milestone>).");
 
-    // Enable auto merge
-    // TODO: Make this working.
+    // Enable auto merge (using GraphQL)
+    api(
+        "https://api.github.com/graphql",
+        json_encode(
+            array(
+                "query" => "mutation MyMutation {
+                        enablePullRequestAutoMerge(input: { pullRequestId: \"{$payload['pull_request']['node_id']}\", mergeMethod: SQUASH}) {
+                            clientMutationId
+                        }
+                    }"
+            )
+        ),
+        "POST"
+    );
 
     $AEdidRun[] = [true, "open_pr_action", "PR #$PRNumber assigned to $user."];
 }
