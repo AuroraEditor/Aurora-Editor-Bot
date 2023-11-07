@@ -62,6 +62,9 @@ if (PHP_SAPI === 'cli') {
 }
 
 if (isset($_POST['payload'])) {
+    // Comply with GitHub's webhook secret
+    header("HTTP/1.1 200 OK");
+
     // Save payload log for traceability
     file_put_contents(
         $fileName = "gh-action/" . time() . ".json",
