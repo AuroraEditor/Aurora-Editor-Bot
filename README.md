@@ -1,9 +1,10 @@
 <p align="center">
-  <img alt="Logo" src="https://avatars.githubusercontent.com/u/106490518?s=128&v=4" width="128px;" height="128px;">
+  <img alt="Logo" src="https://avatars.githubusercontent.com/u/123369531?v=4" width="128px;" height="128px;">
 </p>
 
 <p align="center">
-  <h1 align="center">Aurora Editor GitHub Webhook</h1>
+  <h1 align="center">Aurora Editor GitHub Webhook Bot</h1>
+  <h2 align="center">Aurora Care Bear</h3>
 </p>
 
 <p align="center">
@@ -43,13 +44,12 @@ $settings = array(
 ```
 
 > **Note**\
-> Change all values to your own settins/values.
+> Change all values to your own settings/values.
 
 # Run the webhook
 Upload this to your server and serve it with PHP. 
 
 # Tests
-
 This section tells you how to test different payloads.
 
 > **Note**\
@@ -69,7 +69,7 @@ php index.php issue.json
 
 
 #### Run test (please_assign_me.json)
-This simulates a new comment in [Aurora-Editor-Bot #24](https://github.com/AuroraEditor/Aurora-Editor-Bot/issues/24) saying `@aurora-editor-bot please assign me`.
+This simulates a new comment in [Aurora-Editor-Bot #24](https://github.com/AuroraEditor/Aurora-Editor-Bot/issues/24) saying `@aurora-care-bear please assign me`.
 ```bash
 php index.php please_assign_me.json
 ```
@@ -83,7 +83,7 @@ php index.php pr.json
 
 
 #### Run test (pr_reject.json)
-This simulates a new comment in [Aurora-Editor-Bot #25](https://github.com/AuroraEditor/Aurora-Editor-Bot/pull/25) from an admin saying `@aurora-editor-bot please reject this pr.`.
+This simulates a new comment in [Aurora-Editor-Bot #25](https://github.com/AuroraEditor/Aurora-Editor-Bot/pull/25) from an admin saying `@aurora-care-bear please reject this pr.`.
 
 > **Warning**\
 > This will not execute if `my-bot-name` is not an admin.
@@ -94,7 +94,7 @@ php index.php pr_reject.json
 
 
 #### Run test (pr_accept.json)
-This simulates a new comment in [Aurora-Editor-Bot #25](https://github.com/AuroraEditor/Aurora-Editor-Bot/pull/25) from an admin saying `@aurora-editor-bot please accept this pr.`.
+This simulates a new comment in [Aurora-Editor-Bot #25](https://github.com/AuroraEditor/Aurora-Editor-Bot/pull/25) from an admin saying `@aurora-care-bear please accept this pr.`.
 
 > **Warning**\
 > This will not execute if `my-bot-name` is not an admin.
