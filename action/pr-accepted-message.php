@@ -31,6 +31,16 @@ if (
             ),
             "PUT"
         );
+
+        api(
+            $url = "https://api.github.com/repos/AuroraEditor/AEContributorBot/dispatches",
+            json_encode(
+                array(
+                    "event_type" => "Update Contributors List"
+                )
+            ),
+            "POST"
+        );
     }
 
     $AEdidRun[] = [true, "pr_closed_message", "PR $repo #$PRNumber Closing message to $user."];

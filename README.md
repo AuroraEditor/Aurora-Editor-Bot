@@ -1,10 +1,9 @@
 <p align="center">
-  <img alt="Logo" src="https://avatars.githubusercontent.com/u/123369531?v=4" width="128px;" height="128px;">
+  <img alt="Logo" src="https://avatars.githubusercontent.com/u/106490518?s=128&v=4" width="128px;" height="128px;">
 </p>
 
 <p align="center">
-  <h1 align="center">Aurora Editor GitHub Webhook Bot</h1>
-  <h2 align="center">Aurora Care Bear</h3>
+  <h1 align="center">Aurora Editor GitHub Webhook</h1>
 </p>
 
 <p align="center">
@@ -17,7 +16,7 @@
   <a href='https://twitter.com/intent/tweet?text=Try%20this%20new%20open-source%20code%20editor,%20Aurora%20Editor&url=https://auroraeditor.com&via=Aurora_Editor&hashtags=AuroraEditor,editor,AEIDE,developers,Aurora,OSS' target='_blank'><img src='https://img.shields.io/twitter/url/http/shields.io.svg?style=social'></a>
 </p>
 
-<br />
+<br>
 
 This is the repository for the Aurora Editor GitHub Webhook bot.<br/>
 The bot is used to automate some tasks in the AuroraEditor organization.
@@ -44,12 +43,13 @@ $settings = array(
 ```
 
 > **Note**\
-> Change all values to your own settings/values.
+> Change all values to your own settins/values.
 
 # Run the webhook
 Upload this to your server and serve it with PHP. 
 
 # Tests
+
 This section tells you how to test different payloads.
 
 > **Note**\
@@ -69,7 +69,7 @@ php index.php issue.json
 
 
 #### Run test (please_assign_me.json)
-This simulates a new comment in [Aurora-Editor-Bot #24](https://github.com/AuroraEditor/Aurora-Editor-Bot/issues/24) saying `@aurora-care-bear please assign me`.
+This simulates a new comment in [Aurora-Editor-Bot #24](https://github.com/AuroraEditor/Aurora-Editor-Bot/issues/24) saying `@aurora-editor-bot please assign me`.
 ```bash
 php index.php please_assign_me.json
 ```
@@ -80,41 +80,13 @@ This simulates a new PR [Aurora-Editor-Bot #25](https://github.com/AuroraEditor/
 ```bash
 php index.php pr.json
 ```
-
-
-#### Run test (pr_reject.json)
-This simulates a new comment in [Aurora-Editor-Bot #25](https://github.com/AuroraEditor/Aurora-Editor-Bot/pull/25) from an admin saying `@aurora-care-bear please reject this pr.`.
-
-> **Warning**\
-> This will not execute if `my-bot-name` is not an admin.
-
-```bash
-php index.php pr_reject.json
-```
-
-
-#### Run test (pr_accept.json)
-This simulates a new comment in [Aurora-Editor-Bot #25](https://github.com/AuroraEditor/Aurora-Editor-Bot/pull/25) from an admin saying `@aurora-care-bear please accept this pr.`.
+          
+#### Run test (accept_pr.json)
+This simulates a new comment in [Aurora-Editor-Bot #25](https://github.com/AuroraEditor/Aurora-Editor-Bot/pull/25) from an admin saying `@aurora-editor-bot please accept this pr.`.
 
 > **Warning**\
 > This will not execute if `my-bot-name` is not an admin.
 
 ```bash
-php index.php pr_accept.json
-```
-
-
-#### Run test (pr_closed.json)
-This simulates the [Aurora-Editor-Bot #25](https://github.com/AuroraEditor/Aurora-Editor-Bot/pull/25) being closed without merge, this should not trigger any action.
-
-```bash
-php index.php pr_closed.json
-```
-
-
-#### Run test (pr_merged.json)
-This simulates the [Aurora-Editor-Bot #25](https://github.com/AuroraEditor/Aurora-Editor-Bot/pull/25) being merged.
-
-```bash
-php index.php pr_merged.json
+php index.php accept_pr.json
 ```
