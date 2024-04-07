@@ -69,7 +69,7 @@ php index.php issue.json
 
 
 #### Run test (please_assign_me.json)
-This simulates a new comment in [Aurora-Editor-Bot #24](https://github.com/AuroraEditor/Aurora-Editor-Bot/issues/24) saying `@aurora-editor-bot please assign me`.
+This simulates a new comment in [Aurora-Editor-Bot #24](https://github.com/AuroraEditor/Aurora-Editor-Bot/issues/24) saying `@aurora-care-bear please assign me`.
 ```bash
 php index.php please_assign_me.json
 ```
@@ -82,7 +82,7 @@ php index.php pr.json
 ```
           
 #### Run test (accept_pr.json)
-This simulates a new comment in [Aurora-Editor-Bot #25](https://github.com/AuroraEditor/Aurora-Editor-Bot/pull/25) from an admin saying `@aurora-editor-bot please accept this pr.`.
+This simulates a new comment in [Aurora-Editor-Bot #25](https://github.com/AuroraEditor/Aurora-Editor-Bot/pull/25) from an admin saying `@aurora-care-bear please accept this pr.`.
 
 > **Warning**\
 > This will not execute if `my-bot-name` is not an admin.
