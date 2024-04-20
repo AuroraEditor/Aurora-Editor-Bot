@@ -10,8 +10,10 @@ if (
     $merged = $payload['pull_request']['merged'] ?? false;
 
     if ($merged) {
+        // Send a message to Discord
         discord("PR [{$repo}](<https://github.com/{$repo}>) [#$PRNumber](<{$payload['pull_request']['html_url']}>) is accepted! Closing message to [{$user}](<https://github.com/{$user}>).");
 
+        // Send a message to the user
         api(
             $payload['pull_request']['comments_url'],
             json_encode(
@@ -22,16 +24,18 @@ if (
             'POST'
         );
 
-        api(
-            $url = "https://api.github.com/orgs/AuroraEditor/teams/contributors/memberships/" . $user,
-            json_encode(
-                array(
-                    "role" => "member"
-                )
-            ),
-            "PUT"
-        );
+        // Add user to the contributors team
+        // api(
+        //     $url = "https://api.github.com/orgs/AuroraEditor/teams/contributors/memberships/" . $user,
+        //     json_encode(
+        //         array(
+        //             "role" => "member"
+        //         )
+        //     ),
+        //     "PUT"
+        // );
 
+        // Update contributors list
         api(
             $url = "https://api.github.com/repos/AuroraEditor/AEContributorBot/dispatches",
             json_encode(
