@@ -18,7 +18,10 @@ if (
             $payload['pull_request']['comments_url'],
             json_encode(
                 array(
-                    "body" => "Hey @{$user},\r\n\r\nThanks for your contribution.\r\nYour PR has been merged!\r\nYour name will appear on https://auroraeditor.com/#contributors in a few moments, if you have contributed to the editor.\r\n\r\nThanks again for your contribution!\r\n\r\nKind Regards,\r\nAurora Editor Team."
+                    "body" => sprintf(
+                        "Hey @%s,\r\n\r\nThanks for your contribution.\r\nYour PR has been merged!\r\nYour name will appear on https://auroraeditor.com/#contributors in a few moments, if you have contributed to the editor.\r\n\r\nThanks again for your contribution!\r\n\r\nKind Regards,\r\nAurora Editor Team.",
+                        $user
+                    )
                 )
             ),
             'POST'

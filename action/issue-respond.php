@@ -24,7 +24,10 @@ if (
         $payload['issue']['url'] . "/comments",
         json_encode(
             array(
-                "body" => "Thanks for submitting a issue!\r\nto assign this issue to yourself please comment `@{$settings['username']} please assign me`"
+                "body" => sprintf(
+                    "Thanks for submitting a issue!\r\nto assign this issue to yourself please comment `@%s please assign me`",
+                    $settings['username']
+                )
             )
         ),
         "POST"

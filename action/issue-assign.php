@@ -10,10 +10,12 @@ if (
     $user = $payload['comment']['user']['login'];
     $repo = $payload['repository']['full_name'];
 
-    $expression = '/(@' . $settings['username'] . ')?( )?(please)?( )?assign( )?me/';
     $comment = $payload['comment']['body'] ?? '';
 
-    if (preg_match($expression, strtolower($comment))) {
+    if (
+        preg_match($expressions['assign'], strtolower($comment)) &&
+        !preg_match($expressions['unassign'], strtolower($comment))
+    ) {
         // unless i've found a better way...
         foreach (explode("\n", strtolower($comment)) as $line) {
 
@@ -23,7 +25,7 @@ if (
             }
 
             // We do match the expression.
-            if (!preg_match($expression, strtolower($line))) {
+            if (!preg_match($expressions['assign'], strtolower($line))) {
                 continue;
             }
 
@@ -38,6 +40,20 @@ if (
                         "assignees" => array($user)
                     )
                 )
+            );
+
+            api(
+                $payload['issue']['comments_url'],
+                json_encode(
+                    array(
+                        "body" => sprintf(
+                            "@%s You are assigned now, to unassign comment `@%s please unassign me`.",
+                            $user,
+                            $settings['username']
+                        )
+                    )
+                ),
+                'POST'
             );
         }
     }

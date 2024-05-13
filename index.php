@@ -11,6 +11,12 @@ if (!isset($settings)) {
     exit("I cannot continue without settings, please see config.sample.php for an example.");
 }
 
+// General regular expressions:
+$expressions = [
+    'assign' => '/(@' . $settings['username'] . ')?( )?(please)?( )?assign( )?me/',
+    'unassign' => '/(@' . $settings['username'] . ')?( )?(please)?( )?unassign( )?me/'
+];
+
 include 'discord.php';
 function api($url, $postData = null, $extra = "PATCH")
 {
@@ -62,9 +68,11 @@ if (PHP_SAPI === 'cli') {
 }
 
 if (isset($_POST['payload'])) {
-    // Comply with GitHub's webhook secret
-    http_response_code(200);
-        
+    if (PHP_SAPI !== 'cli') {
+        // Comply with GitHub's webhook secret
+        http_response_code(200);
+    }
+
     // Save payload log for traceability
     file_put_contents(
         $fileName = "gh-action/" . time() . ".json",
@@ -110,7 +118,6 @@ if (isset($_POST['payload'])) {
     foreach ($file = glob("action/*.php") as $filename) {
         include $filename;
     }
-
 } else {
     if (!headers_sent()) {
         header("location: https://github.com/AuroraEditor/");

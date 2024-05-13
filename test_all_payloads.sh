@@ -10,7 +10,15 @@ sleep 2
 # Run test (please_assign_me.json)
 php index.php please_assign_me.json
 sleep 2
-          
+
+# Run test (please_unassign_me.json)
+php index.php please_unassign_me.json
+sleep 2
+
+# Run test (please_assign_me_quote.json) [Should do nothing]
+php index.php please_assign_me_quote.json
+sleep 2
+
 # Run test (pr.json)
 php index.php pr.json
 sleep 2
