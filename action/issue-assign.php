@@ -10,18 +10,27 @@ if (
     $user = $payload['comment']['user']['login'];
     $repo = $payload['repository']['full_name'];
 
-    if (preg_match('/(@' . $settings['username'] . ')?( )?(please)?( )?assign( )?me/', strtolower($payload['comment']['body'] ?? ''))) {
+    $expression = '/(@' . $settings['username'] . ')?( )?(please)?( )?assign( )?me/';
+    $comment = $payload['comment']['body'] ?? '';
+
+    if (preg_match($expression, strtolower($comment))) {
         // unless i've found a better way...
-        foreach (explode("\n", strtolower($payload['comment']['body'] ?? ''))
-            as $line) {
+        foreach (explode("\n", strtolower($comment)) as $line) {
+
             // We are in a blockquote, skip this line.
             if (preg_match("/> /", $line)) {
                 continue;
             }
 
-            // Assign the issue.
+            // We do match the expression.
+            if (!preg_match($expression, strtolower($line))) {
+                continue;
+            }
+
+            // Sent to the discord bot log channel.
             discord("Issue [{$repo}](<https://github.com/{$repo}>) [#$PRNumber](<{$payload['issue']['html_url']}>) is assigned to [{$user}](<https://github.com/{$user}>).");
 
+            // Assign the issue.
             api(
                 $payload['issue']['url'],
                 json_encode(
