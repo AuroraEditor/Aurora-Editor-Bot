@@ -30,6 +30,11 @@ jobs:
           php index.php please_assign_me.json
           sleep 2
           
+      - name: Run test (please_unassign_me.json)
+        run: |
+          php index.php please_unassign_me.json
+          sleep 2
+
       - name: Run test (pr.json)
         run: |
           php index.php pr.json
