@@ -63,10 +63,8 @@ if (PHP_SAPI === 'cli') {
 
 if (isset($_POST['payload'])) {
     // Comply with GitHub's webhook secret
-    if (!headers_sent()) {
-        header("HTTP/1.1 200 OK");
-    }
-
+    http_response_code(200);
+        
     // Save payload log for traceability
     file_put_contents(
         $fileName = "gh-action/" . time() . ".json",
@@ -112,8 +110,9 @@ if (isset($_POST['payload'])) {
     foreach ($file = glob("action/*.php") as $filename) {
         include $filename;
     }
-}
 
-if (!headers_sent()) {
-    header("location: /");
+} else {
+    if (!headers_sent()) {
+        header("location: https://github.com/AuroraEditor/");
+    }
 }

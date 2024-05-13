@@ -55,5 +55,20 @@ if (
         "POST"
     );
 
+    if ($user == "dependabot[bot]") {
+        discord("PR [{$repo}](<https://github.com/{$repo}>) [#$PRNumber](<{$payload['pull_request']['html_url']}>) by {$user} is automatically accepted.");
+
+        api(
+            $payload['pull_request']['url'] . '/reviews',
+            json_encode(
+                array(
+                    "body" => "LGTM",
+                    "event" => "APPROVE"
+                )
+            ),
+            'POST'
+        );
+    }
+
     $AEdidRun[] = [true, "open_pr_action", "PR #$PRNumber assigned to $user."];
 }
