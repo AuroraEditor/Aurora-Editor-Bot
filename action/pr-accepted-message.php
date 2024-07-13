@@ -8,8 +8,7 @@ if (
     $user = $payload['pull_request']['user']['login'];
     $repo = $payload['repository']['full_name'];
     $merged = $payload['pull_request']['merged'] ?? false;
-
-    if ($merged) {
+    if ($merged && $user != "dependabot[bot]") {
         // Send a message to Discord
         discord("PR [{$repo}](<https://github.com/{$repo}>) [#$PRNumber](<{$payload['pull_request']['html_url']}>) is accepted! Closing message to [{$user}](<https://github.com/{$user}>).");
 
